@@ -1,6 +1,5 @@
 package simulador;
 
-// Classe genérica de Memória
 public class Memoria {
     protected String nome;
     protected int latencia;
@@ -16,7 +15,6 @@ public class Memoria {
     }
 }
 
-// Classe Cache (subclasse de Memoria)
 class Cache extends Memoria {
     private int tamanhoLinha;
     private String politicaEscrita;
@@ -36,7 +34,7 @@ class Cache extends Memoria {
 
     @Override
     public int acessar(int endereco) {
-        // Calcular índice e tag usando as funções de bits
+
         int offsetBits = (int) (Math.log(tamanhoLinha) / Math.log(2));
         int conjuntoBits = (int) (Math.log(conjuntos) / Math.log(2));
 
@@ -47,7 +45,6 @@ class Cache extends Memoria {
         Main.print_bits(endereco);
         System.out.println();
 
-        // Simulação de hits e misses
         int hit = (int) (Math.random() * 2); // Simulação
         if (hit == 1) {
             System.out.println(nome + ": HIT");

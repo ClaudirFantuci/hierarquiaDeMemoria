@@ -2,7 +2,7 @@ package simulador;
 
 public class CacheConfig {
     String nome;
-    int conjuntos; // Número de conjuntos
+    int conjuntos;
     int associatividade;
     int tamanhoLinha;
     String politicaEscrita;
